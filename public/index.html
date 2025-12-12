@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Viaje Consciente – Brasil 2026</title>
+  <meta name="description" content="Reconexión Brasil 2026: un camino ancestral de sanación, autoconocimiento y medicina de origen. Viaje acompañado por Tribu Pataxó y equipo terapéutico." />
+
   <style>
     :root{
       --sand:#F4EDE2;
@@ -11,16 +13,33 @@
       --leaf:#78866B;
       --softblack:#222222;
       --white:#ffffff;
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.88);
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:var(--sand);
       color:var(--softblack);
-      line-height:1.5;
+      line-height:1.55;
     }
+
     .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .muted{color:#555}
+    .small{font-size:12px;color:#666}
+    .kicker{
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size:12px;
+      opacity:.92;
+      margin:0 0 14px;
+    }
+
+    /* HERO */
     .hero{
       min-height:100vh;
       display:flex;
@@ -33,34 +52,30 @@
       position:absolute; inset:0;
       width:100%; height:100%;
       object-fit:cover;
-      transform:scale(1.02);
+      transform:scale(1.03);
     }
     .overlay{
       position:absolute; inset:0;
-      background:rgba(0,0,0,.45);
+      background:rgba(0,0,0,.48);
     }
     .hero .content{
       position:relative;
-      padding:80px 0;
-      max-width:760px;
-    }
-    .kicker{
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      font-size:12px;
-      opacity:.9;
-      margin:0 0 14px;
+      padding:92px 0 80px;
+      max-width:820px;
+      margin:0 auto;
+      text-align:center; /* ✅ Título centrado + todo el bloque */
     }
     h1{
-      font-size:46px;
+      font-size:50px;
       margin:0 0 12px;
-      line-height:1.08;
+      line-height:1.06;
     }
     .sub{
       font-size:18px;
       margin:0 0 26px;
       opacity:.92;
     }
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     .btn{
       display:inline-block;
       background:var(--terracotta);
@@ -68,50 +83,123 @@
       padding:14px 22px;
       border-radius:999px;
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.18);
     }
-    section{padding:70px 0}
+    .btn.secondary{
+      background:transparent;
+      border:1px solid rgba(255,255,255,.35);
+      font-weight:650;
+    }
+    .pillrow{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .pill{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      color:#fff;
+      text-decoration:none;
+      font-size:12px;
+      border:1px solid rgba(255,255,255,.16);
+    }
+
+    /* SECTIONS */
+    section{padding:72px 0}
+    .section-title{
+      font-size:34px;
+      margin:0 0 18px;
+      color:var(--leaf);
+    }
+    .section-lead{margin:0 0 18px;max-width:900px}
+
     .card{
-      background:rgba(255,255,255,.75);
+      background:var(--card);
       border-radius:18px;
       padding:22px;
+      border:1px solid rgba(0,0,0,.06);
     }
-    h2{
-      color:var(--leaf);
-      font-size:32px;
-      margin:0 0 18px;
-    }
-    .grid{
+    .card.strong{background:var(--card2)}
+    .grid-3{
       display:grid;
       gap:18px;
       grid-template-columns:repeat(3,1fr);
       margin-top:18px;
     }
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr}
-      h1{font-size:38px}
+    .grid-2{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(2,1fr);
+      margin-top:18px;
     }
-    .muted{color:#555}
+    .grid-1{display:grid;gap:18px}
+
+    h2,h3{margin:0 0 10px}
+    h3{font-size:18px;color:#1f1f1f}
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin:8px 0}
+
+    /* ITINERARY */
+    .days{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(3,1fr);
+      margin-top:18px;
+    }
+    .day{
+      background:var(--card2);
+      border-radius:18px;
+      padding:18px 18px 16px;
+      border:1px solid rgba(0,0,0,.06);
+    }
+    .day .tag{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(217,166,121,.22);
+      color:#6b3f1c;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .day p{margin:8px 0;color:#333;font-size:14px}
+
+    /* FOOTER */
     footer{
       background:var(--softblack);
       color:#cfcfcf;
-      padding:48px 0;
+      padding:54px 0;
     }
-    footer h3{margin:0 0 10px;color:#fff}
-    .pill{
+    footer h3{margin:0 0 10px;color:#fff;font-size:22px}
+    .footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .footer-links a{
       display:inline-block;
       padding:10px 14px;
       border-radius:999px;
       background:#ffffff12;
       color:#fff;
       text-decoration:none;
-      margin:8px 10px 0 0;
+      border:1px solid rgba(255,255,255,.10);
+      font-size:13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .days{grid-template-columns:1fr}
+      h1{font-size:40px}
+      .section-title{font-size:30px}
     }
   </style>
 </head>
+
 <body>
 
-  <header class="hero">
+  <!-- HERO -->
+  <header class="hero" id="inicio">
     <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop" alt="Playa" />
     <div class="overlay"></div>
 
@@ -119,65 +207,297 @@
       <div class="content">
         <p class="kicker">Reconexión Brasil 2026</p>
         <h1>Viaje Consciente</h1>
-        <p class="sub">Sanación · Autoconocimiento · Medicina de Origen</p>
-        <a class="btn" href="https://wa.me/5493813672243" target="_blank" rel="noopener">Quiero más información</a>
+        <p class="sub">Un camino ancestral de sanación, autoconocimiento y medicina de origen</p>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/5493813672243" target="_blank" rel="noopener">Quiero más información</a>
+          <a class="btn secondary" href="#programa">Ver programa</a>
+        </div>
+
+        <div class="pillrow" aria-label="Resumen rápido">
+          <span class="pill">Ceremonias & rituales</span>
+          <span class="pill">Tribu Pataxó</span>
+          <span class="pill">Equipo terapéutico</span>
+          <span class="pill">Caraíva + Arraial d’Ajuda</span>
+        </div>
       </div>
     </div>
   </header>
 
-  <section>
+  <!-- PROPÓSITO -->
+  <section id="proposito">
     <div class="wrap">
-      <h2>El Propósito del Viaje</h2>
-      <div class="grid">
+      <h2 class="section-title">El propósito del viaje</h2>
+      <p class="section-lead muted">
+        Un viaje de transformación. No es solo turismo o recreación: es un proceso profundo de sanación, expansión y autoconocimiento, acompañado por la Tribu Pataxó y un equipo terapéutico profesional. :contentReference[oaicite:1]{index=1}
+      </p>
+
+      <div class="grid-3">
         <div class="card">
-          <h3>Sanación Profunda</h3>
-          <p class="muted">Un proceso consciente para liberar cargas y comprenderte mejor.</p>
+          <h3>Proceso profundo</h3>
+          <p class="muted">Sanación, expansión y autoconocimiento dentro de un entorno seguro y guiado. :contentReference[oaicite:2]{index=2}</p>
         </div>
         <div class="card">
-          <h3>Sabiduría Ancestral</h3>
-          <p class="muted">Acompañamiento de la Tribu Pataxó en un entorno seguro.</p>
+          <h3>Camino ancestral</h3>
+          <p class="muted">Ceremonias, rituales, introspección, integración emocional y medicina de origen. :contentReference[oaicite:3]{index=3}</p>
         </div>
         <div class="card">
-          <h3>Sostén Profesional</h3>
-          <p class="muted">Psicología, coaching, terapia holística y enfermería.</p>
+          <h3>Contención real</h3>
+          <p class="muted">Presencia, cuidado y sostén durante cada etapa del proceso. :contentReference[oaicite:4]{index=4}</p>
+        </div>
+      </div>
+
+      <div class="card strong" style="margin-top:18px;">
+        <h3>Equipo de acompañamiento</h3>
+        <p class="muted" style="margin:0;">
+          Psicóloga clínica, terapeuta holístico especializado en procesos con medicinas, coach ontológico y enfermera universitaria, disponibles para el grupo durante todo el proceso. :contentReference[oaicite:5]{index=5}
+        </p>
+        <p class="muted" style="margin:12px 0 0;">
+          El trabajo no es solo con la medicina, sino con el sentido, la intención, el cuerpo, la emoción y la palabra. :contentReference[oaicite:6]{index=6}
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p style="margin:0;font-style:italic;color:#2f2f2f;">
+          “Este viaje está diseñado para que puedas abrirte, sanar, comprenderte, liberar cargas, observarte con nuevos ojos y regresar a tu vida con una mirada más liviana, consciente y profunda.”
+          :contentReference[oaicite:7]{index=7}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE (resumen visual) -->
+  <section id="incluye" style="padding-top:0;">
+    <div class="wrap">
+      <h2 class="section-title">¿Qué incluye?</h2>
+
+      <div class="grid-3">
+        <div class="card">✈️ Pasajes ida y vuelta Córdoba → Porto Seguro → Córdoba :contentReference[oaicite:8]{index=8}</div>
+        <div class="card">🏨 Hospedaje en Caraíva y Arraial d’Ajuda + desayunos :contentReference[oaicite:9]{index=9}</div>
+        <div class="card">🚐 Traslados internos a todas las vivencias y excursiones :contentReference[oaicite:10]{index=10}</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">🌿 Ceremonia de Ayahuasca (consagración) :contentReference[oaicite:11]{index=11}</div>
+        <div class="card">🌬️ Ritual de Rapé + vivencia con Tribu Pataxó :contentReference[oaicite:12]{index=12}</div>
+        <div class="card">🔥 Círculos terapéuticos de integración :contentReference[oaicite:13]{index=13}</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">👩‍⚕️ Acompañamiento psicológico, holístico y ontológico :contentReference[oaicite:14]{index=14}</div>
+        <div class="card">📓 Material de preparación + diario de acompañamiento :contentReference[oaicite:15]{index=15}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMA -->
+  <section id="programa">
+    <div class="wrap">
+      <h2 class="section-title">Programa (Día 1 al Día 9)</h2>
+      <p class="section-lead muted">
+        Flujo diseñado para transitar desde la llegada hasta la profundidad del ser, y volver integrados. :contentReference[oaicite:16]{index=16}
+      </p>
+
+      <div class="days">
+        <div class="day">
+          <span class="tag">Día 1</span>
+          <p><strong>Mañana:</strong> Encuentro en Porto Seguro y traslado a Caraíva.</p>
+          <p><strong>Tarde:</strong> Check-in + descanso.</p>
+          <p><strong>Noche:</strong> Fogata y círculo de bienvenida.</p>
+          <p class="small">:contentReference[oaicite:17]{index=17}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 2</span>
+          <p><strong>Mañana:</strong> Desayuno grupal y actividad de apertura: conexión y presencia.</p>
+          <p><strong>Tarde:</strong> Libre (playa / pueblo).</p>
+          <p><strong>Noche:</strong> Encuentro “¿Qué vengo a trabajar?” + preguntas guía + coaching.</p>
+          <p class="small">:contentReference[oaicite:18]{index=18}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 3</span>
+          <p><strong>Mañana:</strong> Vivencia en Tribu Pataxó (Aldea Xando): ritual de Rapé y conversatorio.</p>
+          <p><strong>Tarde:</strong> Libre.</p>
+          <p><strong>Noche:</strong> Círculo de preparación para Ayahuasca + guía y comienzo de trabajos.</p>
+          <p class="small">:contentReference[oaicite:19]{index=19}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 4</span>
+          <p><strong>Día:</strong> Silencio y preparación para la consagración.</p>
+          <p><strong>Actividades:</strong> Playa suave, lectura y escritura.</p>
+          <p><strong>Noche:</strong> Consagración de Ayahuasca en Aldea Para + acompañamiento toda la noche.</p>
+          <p class="small">:contentReference[oaicite:20]{index=20}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 5</span>
+          <p><strong>Mañana:</strong> Desayuno de cierre Pataxó y regreso al amanecer.</p>
+          <p><strong>Tarde:</strong> Descanso hasta la próxima actividad.</p>
+          <p><strong>Noche:</strong> Círculo de integración alrededor del fuego y análisis de experiencias.</p>
+          <p class="small">:contentReference[oaicite:21]{index=21}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 6</span>
+          <p><strong>Mañana:</strong> Libre.</p>
+          <p><strong>Tarde:</strong> “Mujeres que Curan”: ritual guiado con rezos, cantos y cura energética (Aldea Barra Velha).</p>
+          <p><strong>Noche:</strong> Agenda con opciones: música en vivo, paseo, bares y entretenimiento.</p>
+          <p class="small">:contentReference[oaicite:22]{index=22}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 7</span>
+          <p><strong>Mañana y tarde:</strong> Excursión a Ponta do Corumbau (traslado incluido): playa y contemplación.</p>
+          <p><strong>Noche:</strong> Círculo terapéutico alrededor del fuego + terapia transgeneracional.</p>
+          <p class="small">:contentReference[oaicite:23]{index=23}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 8</span>
+          <p><strong>Mañana:</strong> Traslado a Arraial d’Ajuda, check-in y paseo por zona céntrica.</p>
+          <p><strong>Noche:</strong> Ritual de cierre y espacio de integración final.</p>
+          <p class="small">:contentReference[oaicite:24]{index=24}</p>
+        </div>
+
+        <div class="day">
+          <span class="tag">Día 9</span>
+          <p><strong>Mañana:</strong> Traslado a Porto Seguro.</p>
+          <p class="small">:contentReference[oaicite:25]{index=25}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- QUE INCLUYE / NO INCLUYE -->
+  <section id="detalles" style="padding-top:0;">
     <div class="wrap">
-      <h2>¿Qué incluye?</h2>
-      <div class="grid">
-        <div class="card">✈️ Pasajes ida y vuelta</div>
-        <div class="card">🏨 Hospedaje con desayuno</div>
-        <div class="card">🌿 Ceremonias ancestrales</div>
-        <div class="card">🚐 Traslados internos</div>
-        <div class="card">📓 Material de trabajo</div>
-        <div class="card">🫂 Acompañamiento integral</div>
+      <div class="grid-2">
+        <div class="card strong">
+          <h2 class="section-title" style="margin-bottom:10px;">Qué incluye</h2>
+          <ul class="list">
+            <li>Vuelo Córdoba ↔ Porto Seguro (ida y vuelta)</li>
+            <li>Traslados internos a todas las vivencias</li>
+            <li>Hospedaje en Caraíva y Arraial d’Ajuda</li>
+            <li>Desayunos</li>
+            <li>Ceremonia de Ayahuasca</li>
+            <li>Ritual de Rapé</li>
+            <li>Vivencia “Mujeres que Curan”</li>
+            <li>Excursión a Ponta de Corumbau (traslado incluido)</li>
+            <li>Círculos terapéuticos de integración</li>
+            <li>Acompañamiento psicológico, holístico y ontológico</li>
+            <li>Material de preparación</li>
+            <li>Diario de acompañamiento</li>
+          </ul>
+          <p class="small">:contentReference[oaicite:26]{index=26}</p>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title" style="margin-bottom:10px;">No incluye</h2>
+          <ul class="list">
+            <li>Comidas (excepto desayunos)</li>
+            <li>Actividades turísticas opcionales</li>
+            <li>Gastos personales</li>
+            <li>Seguro de viaje (recomendado)</li>
+          </ul>
+          <p class="small">:contentReference[oaicite:27]{index=27}</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- INVERSIÓN -->
+  <section id="inversion" style="padding-top:0;">
     <div class="wrap">
-      <h2>Inversión</h2>
-      <div class="card">
-        <p style="font-size:28px;margin:0 0 6px;"><strong>AR$ 1.600.000</strong> <span class="muted">por persona</span></p>
-        <p class="muted" style="margin:0 0 14px;">Reserva con seña de <strong>AR$ 600.000</strong>.</p>
-        <a class="btn" href="https://wa.me/5493813672243?text=Hola,%20me%20interesa%20reservar%20mi%20lugar%20para%20Viaje%20Consciente%20Brasil" target="_blank" rel="noopener">Reservar mi lugar</a>
+      <h2 class="section-title">Inversión</h2>
+
+      <div class="grid-2">
+        <div class="card strong">
+          <h3>Precio</h3>
+          <p style="font-size:28px;margin:0 0 6px;"><strong>AR$ 1.600.000</strong> <span class="muted">por persona</span></p>
+          <p class="muted" style="margin:0;">Incluye vuelos, hospedaje, traslados y vivencias ancestrales. :contentReference[oaicite:28]{index=28}</p>
+        </div>
+
+        <div class="card">
+          <h3>Reserva de cupo</h3>
+          <p class="muted" style="margin:0 0 6px;">Seña para asegurar pasaje + lugar en el grupo:</p>
+          <p style="font-size:22px;margin:0;"><strong>AR$ 600.000</strong></p>
+          <p class="small" style="margin-top:10px;">:contentReference[oaicite:29]{index=29}</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;text-align:center;">
+        <a class="btn" href="https://wa.me/5493813672243?text=Hola,%20me%20interesa%20reservar%20mi%20lugar%20para%20Viaje%20Consciente%20Brasil" target="_blank" rel="noopener">
+          Reservar mi lugar
+        </a>
+        <p class="small" style="margin-top:10px;">Precios sujetos a modificaciones según la fecha de contratación.</p>
       </div>
     </div>
   </section>
 
+  <!-- REQUISITOS -->
+  <section id="requisitos" style="padding-top:0;">
+    <div class="wrap">
+      <h2 class="section-title">Requisitos previos</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Ficha de salud</h3>
+          <p class="muted">Completar formulario de salud.</p>
+          <p class="small">:contentReference[oaicite:30]{index=30}</p>
+        </div>
+        <div class="card">
+          <h3>Contrato / disclaimer</h3>
+          <p class="muted">Aceptar contrato y disclaimer del viaje.</p>
+          <p class="small">:contentReference[oaicite:31]{index=31}</p>
+        </div>
+        <div class="card">
+          <h3>Seguro de viaje</h3>
+          <p class="muted">Recomendación: contratar seguro de viaje.</p>
+          <p class="small">:contentReference[oaicite:32]{index=32}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section id="cierre" style="padding-top:0;">
+    <div class="wrap">
+      <div class="card strong">
+        <h2 class="section-title" style="margin-bottom:10px;">Gracias por llegar hasta acá</h2>
+        <p class="muted" style="margin:0 0 12px;">
+          Si esta propuesta despertó algo en vos —una intuición, una pregunta, una necesidad de cambio o simplemente un llamado interno— quizás este sea tu momento. :contentReference[oaicite:33]{index=33}
+        </p>
+        <p class="muted" style="margin:0 0 12px;">
+          Este viaje no está pensado para todos. Está pensado para quienes sienten que hay algo más profundo esperándolos; para quienes están listos para mirarse, sanar, transformar y abrir un nuevo capítulo en su vida. :contentReference[oaicite:34]{index=34}
+        </p>
+        <p class="muted" style="margin:0;">
+          Si sentís que este camino te resuena, estamos acá para acompañarte. Podés escribirnos para recibir más información o reservar tu lugar. :contentReference[oaicite:35]{index=35}
+        </p>
+
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn" href="https://wa.me/5493813672243" target="_blank" rel="noopener">WhatsApp +54 9 381 367-2243</a>
+          <a class="btn secondary" href="https://wa.me/5493816032593" target="_blank" rel="noopener">WhatsApp +54 9 381 603-2593</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <h3>Viaje Consciente</h3>
-      <p class="muted" style="color:#bdbdbd;max-width:740px;">
-        Si esta propuesta despertó algo en vos —una intuición, una pregunta o un llamado interno— quizás este sea tu momento.
+      <p class="muted" style="color:#bdbdbd;max-width:820px;margin:0;">
+        Reconexión Brasil 2026 — un camino ancestral de sanación, autoconocimiento y medicina de origen.
       </p>
-      <a class="pill" href="https://wa.me/5493813672243" target="_blank" rel="noopener">WhatsApp 1</a>
-      <a class="pill" href="https://wa.me/5493816032593" target="_blank" rel="noopener">WhatsApp 2</a>
+      <div class="footer-links">
+        <a href="#proposito">Propósito</a>
+        <a href="#programa">Programa</a>
+        <a href="#detalles">Incluye</a>
+        <a href="#inversion">Inversión</a>
+        <a href="#requisitos">Requisitos</a>
+        <a href="#inicio">Volver arriba</a>
+      </div>
       <p style="margin-top:18px;font-size:12px;color:#9a9a9a;">© 2026 Reconexión</p>
     </div>
   </footer>
