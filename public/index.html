@@ -1,158 +1,186 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2639
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viaje Consciente – Brasil 2026</title>
+  <style>
+    :root{
+      --sand:#F4EDE2;
+      --terracotta:#D9A679;
+      --leaf:#78866B;
+      --softblack:#222222;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--sand);
+      color:var(--softblack);
+      line-height:1.5;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      color:#fff;
+      overflow:hidden;
+    }
+    .hero img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      transform:scale(1.02);
+    }
+    .overlay{
+      position:absolute; inset:0;
+      background:rgba(0,0,0,.45);
+    }
+    .hero .content{
+      position:relative;
+      padding:80px 0;
+      max-width:760px;
+    }
+    .kicker{
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size:12px;
+      opacity:.9;
+      margin:0 0 14px;
+    }
+    h1{
+      font-size:46px;
+      margin:0 0 12px;
+      line-height:1.08;
+    }
+    .sub{
+      font-size:18px;
+      margin:0 0 26px;
+      opacity:.92;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--terracotta);
+      color:#fff;
+      padding:14px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    section{padding:70px 0}
+    .card{
+      background:rgba(255,255,255,.75);
+      border-radius:18px;
+      padding:22px;
+    }
+    h2{
+      color:var(--leaf);
+      font-size:32px;
+      margin:0 0 18px;
+    }
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(3,1fr);
+      margin-top:18px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+    }
+    .muted{color:#555}
+    footer{
+      background:var(--softblack);
+      color:#cfcfcf;
+      padding:48px 0;
+    }
+    footer h3{margin:0 0 10px;color:#fff}
+    .pill{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#ffffff12;
+      color:#fff;
+      text-decoration:none;
+      margin:8px 10px 0 0;
+    }
+  </style>
+</head>
+<body>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="es">\
-<head>\
-  <meta charset="UTF-8">\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-  <title>Viaje Consciente \'96 Brasil 2026</title>\
-\
-  <!-- Fonts -->\
-  <link rel="preconnect" href="https://fonts.googleapis.com">\
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">\
-\
-  <!-- Tailwind -->\
-  <script src="https://cdn.tailwindcss.com"></script>\
-\
-  <!-- Icons -->\
-  <script src="https://unpkg.com/lucide@latest"></script>\
-\
-  <style>\
-    body \{\
-      font-family: 'Montserrat', sans-serif;\
-      background-color: #F4EDE2;\
-      color: #222222;\
-    \}\
-    h1, h2, h3 \{\
-      font-family: 'Playfair Display', serif;\
-    \}\
-  </style>\
-</head>\
-\
-<body>\
-\
-<!-- HERO -->\
-<section class="relative h-screen flex items-center justify-center">\
-  <img\
-    src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop"\
-    class="absolute inset-0 w-full h-full object-cover"\
-    alt="Playa"\
-  />\
-  <div class="absolute inset-0 bg-black/40"></div>\
-\
-  <div class="relative text-center text-white px-6 max-w-3xl">\
-    <p class="uppercase tracking-widest text-sm mb-4">Reconexi\'f3n Brasil 2026</p>\
-    <h1 class="text-4xl md:text-6xl mb-6">Viaje Consciente</h1>\
-    <p class="text-lg mb-8">Sanaci\'f3n \'b7 Autoconocimiento \'b7 Medicina de Origen</p>\
-    <a\
-      href="https://wa.me/5493813672243"\
-      class="inline-block bg-[#D9A679] text-white px-8 py-4 rounded-full font-medium"\
-    >\
-      Quiero m\'e1s informaci\'f3n\
-    </a>\
-  </div>\
-</section>\
-\
-<!-- PROP\'d3SITO -->\
-<section class="py-20 px-6 bg-[#F4EDE2]">\
-  <div class="max-w-4xl mx-auto text-center">\
-    <h2 class="text-3xl md:text-5xl mb-12 text-[#78866B]">El Prop\'f3sito del Viaje</h2>\
-\
-    <div class="grid md:grid-cols-3 gap-8 mb-12">\
-      <div class="bg-white/70 p-6 rounded-2xl">\
-        <h3 class="text-xl mb-3 text-[#78866B]">Sanaci\'f3n Profunda</h3>\
-        <p class="text-sm text-gray-700">\
-          Un proceso consciente para liberar cargas y comprenderte mejor.\
-        </p>\
-      </div>\
-\
-      <div class="bg-white/70 p-6 rounded-2xl">\
-        <h3 class="text-xl mb-3 text-[#78866B]">Sabidur\'eda Ancestral</h3>\
-        <p class="text-sm text-gray-700">\
-          Acompa\'f1amiento de la Tribu Patax\'f3 en un entorno seguro.\
-        </p>\
-      </div>\
-\
-      <div class="bg-white/70 p-6 rounded-2xl">\
-        <h3 class="text-xl mb-3 text-[#78866B]">Sost\'e9n Profesional</h3>\
-        <p class="text-sm text-gray-700">\
-          Psicolog\'eda, coaching, terapia hol\'edstica y enfermer\'eda.\
-        </p>\
-      </div>\
-    </div>\
-\
-    <p class="italic text-gray-700 text-lg">\
-      \'93Un viaje hacia el origen, la naturaleza y hacia vos.\'94\
-    </p>\
-  </div>\
-</section>\
-\
-<!-- INCLUYE -->\
-<section class="py-20 px-6 bg-white">\
-  <div class="max-w-5xl mx-auto text-center">\
-    <h2 class="text-3xl md:text-5xl mb-12 text-[#78866B]">\'bfQu\'e9 incluye?</h2>\
-\
-    <div class="grid md:grid-cols-3 gap-8 text-sm text-gray-600">\
-      <div>
-\f1 \uc0\u9992 \u65039 
-\f0  Pasajes ida y vuelta</div>\
-      <div>
-\f1 \uc0\u55356 \u57320 
-\f0  Hospedaje con desayuno</div>\
-      <div>
-\f1 \uc0\u55356 \u57151 
-\f0  Ceremonias ancestrales</div>\
-      <div>
-\f1 \uc0\u55357 \u56976 
-\f0  Traslados internos</div>\
-      <div>
-\f1 \uc0\u55357 \u56531 
-\f0  Material de trabajo</div>\
-      <div>
-\f1 \uc0\u55358 \u57026 
-\f0  Acompa\'f1amiento integral</div>\
-    </div>\
-  </div>\
-</section>\
-\
-<!-- INVERSI\'d3N -->\
-<section class="py-20 px-6 bg-[#F4EDE2]">\
-  <div class="max-w-3xl mx-auto text-center bg-white/70 p-10 rounded-3xl">\
-    <h2 class="text-3xl mb-6 text-[#78866B]">Inversi\'f3n</h2>\
-    <p class="text-4xl mb-2">AR$ 1.600.000</p>\
-    <p class="mb-6 text-gray-600">por persona</p>\
-\
-    <p class="mb-4">Reserva con se\'f1a de:</p>\
-    <p class="text-xl font-bold mb-6">AR$ 600.000</p>\
-\
-    <a\
-      href="https://wa.me/5493813672243"\
-      class="inline-block bg-[#78866B] text-white px-10 py-4 rounded-full"\
-    >\
-      Reservar mi lugar\
-    </a>\
-  </div>\
-</section>\
-\
-<!-- FOOTER -->\
-<footer class="py-16 px-6 bg-[#222222] text-center text-gray-400">\
-  <h3 class="text-white text-2xl mb-6">Viaje Consciente</h3>\
-  <p class="max-w-xl mx-auto mb-8">\
-    Si esta propuesta despert\'f3 algo en vos, quiz\'e1s este sea tu momento.\
-  </p>\
-  <p class="text-sm">\'a9 2026 Reconexi\'f3n</p>\
-</footer>\
-\
-<script>\
-  lucide.createIcons();\
-</script>\
-\
-</body>\
-</html>\
-}
+  <header class="hero">
+    <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop" alt="Playa" />
+    <div class="overlay"></div>
+
+    <div class="wrap">
+      <div class="content">
+        <p class="kicker">Reconexión Brasil 2026</p>
+        <h1>Viaje Consciente</h1>
+        <p class="sub">Sanación · Autoconocimiento · Medicina de Origen</p>
+        <a class="btn" href="https://wa.me/5493813672243" target="_blank" rel="noopener">Quiero más información</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2>El Propósito del Viaje</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Sanación Profunda</h3>
+          <p class="muted">Un proceso consciente para liberar cargas y comprenderte mejor.</p>
+        </div>
+        <div class="card">
+          <h3>Sabiduría Ancestral</h3>
+          <p class="muted">Acompañamiento de la Tribu Pataxó en un entorno seguro.</p>
+        </div>
+        <div class="card">
+          <h3>Sostén Profesional</h3>
+          <p class="muted">Psicología, coaching, terapia holística y enfermería.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>¿Qué incluye?</h2>
+      <div class="grid">
+        <div class="card">✈️ Pasajes ida y vuelta</div>
+        <div class="card">🏨 Hospedaje con desayuno</div>
+        <div class="card">🌿 Ceremonias ancestrales</div>
+        <div class="card">🚐 Traslados internos</div>
+        <div class="card">📓 Material de trabajo</div>
+        <div class="card">🫂 Acompañamiento integral</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Inversión</h2>
+      <div class="card">
+        <p style="font-size:28px;margin:0 0 6px;"><strong>AR$ 1.600.000</strong> <span class="muted">por persona</span></p>
+        <p class="muted" style="margin:0 0 14px;">Reserva con seña de <strong>AR$ 600.000</strong>.</p>
+        <a class="btn" href="https://wa.me/5493813672243?text=Hola,%20me%20interesa%20reservar%20mi%20lugar%20para%20Viaje%20Consciente%20Brasil" target="_blank" rel="noopener">Reservar mi lugar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <h3>Viaje Consciente</h3>
+      <p class="muted" style="color:#bdbdbd;max-width:740px;">
+        Si esta propuesta despertó algo en vos —una intuición, una pregunta o un llamado interno— quizás este sea tu momento.
+      </p>
+      <a class="pill" href="https://wa.me/5493813672243" target="_blank" rel="noopener">WhatsApp 1</a>
+      <a class="pill" href="https://wa.me/5493816032593" target="_blank" rel="noopener">WhatsApp 2</a>
+      <p style="margin-top:18px;font-size:12px;color:#9a9a9a;">© 2026 Reconexión</p>
+    </div>
+  </footer>
+
+</body>
+</html>
